@@ -25,8 +25,9 @@ export default {
               accentShadow: 'hsl(6, 70%, 34%)',
             },
             text: {
+              body: 'hsl(0, 100%, 100%)',
               primary: 'hsl(221, 14%, 31%)',
-              secondary: 'hsl(221, 14%, 31%)',
+              secondary: 'hsl(0, 100%, 100%)',
             },
           },
         },
@@ -48,8 +49,9 @@ export default {
                 accentShadow: 'hsl(25, 99%, 27%)',
               },
               text: {
+                body: 'hsl(60, 10%, 19%)',
                 primary: 'hsl(60, 10%, 19%)',
-                secondary: 'hsl(60, 10%, 19%)',
+                secondary: 'hsl(0, 100%, 100%)',
               },
             },
           },
@@ -70,6 +72,7 @@ export default {
                 accentShadow: 'hsl(177, 92%, 70%)',
               },
               text: {
+                body: 'hsl(52, 100%, 62%)',
                 primary: 'hsl(52, 100%, 62%)',
                 secondary: 'hsl(198, 20%, 13%)',
               },
