@@ -6,10 +6,21 @@ const TogglePosition = {
   pink: 'translate-x-9',
 };
 
+type Theme = 'dark' | 'light' | 'pink';
+
 export default function Header() {
-  const [theme, setTheme] = useState<'dark' | 'light' | 'pink'>('dark');
+  const [theme, setTheme] = useState<Theme>(() => {
+    const persistedTheme = localStorage.getItem('theme');
+    if (!persistedTheme) {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+    }
+    return persistedTheme as Theme;
+  });
 
   useEffect(() => {
+    localStorage.setItem('theme', theme);
     if (theme === 'dark') {
       document.body.classList.add('dark');
       document.body.classList.remove('light');
