@@ -21,7 +21,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@features/*": [
+        "src/features/*"
+      ]
+    }
   },
   "include": [
     ".eslintrc.cjs",
